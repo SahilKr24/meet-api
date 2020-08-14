@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    var xhttp = new XMLHttpRequest();
+    document.addEventListener('DOMContentLoaded',() => {
+      const form = document.getElementById('form')
+      form.addEventListener('submit', (event) => {
+        event.preventDefault()
+        console.log('hello')
+        xhttp.open('POST','/create')
+        xhttp.setRequestHeader('Content-Type','application/json')
+        xhttp.send(JSON.stringify({
+          'name':document.getElementsByName('name')[0].value,
+          'code':document.getElementsByName('code')[0].value,
+          'date':document.getElementsByName('date')[0].value,
+          'stime':document.getElementsByName('stime')[0].value,
+          'etime':document.getElementsByName('etime')[0].value,
+          'attendees':document.getElementsByName('attendees')[0].value,
+          'token':document.getElementsByName('token')[0].value,
+        }))
+      })
+    })
+  </script>
+</head>
+<body>
+
+  <h2>Class Information</h2>
+
+  <form id='form' action="/createx`" method="POST">
+    <label for="name">Class Name</label><br>
+    <input type="text" id="name" name="name"><br>
+    <label for="code">Classroom ID</label><br>
+    <input type="text" id="code" name="code"><br><br>
+    <label for="date">Date</label><br>
+    <input type="date" id="date" name="date"><br>
+    <label for="stime">Start Time</label><br>
+    <input type="time" id="stime" name="stime"><br>
+    <label for="stime">End Time</label><br>
+    <input type="time" id="etime" name="etime"><br>
+    <label for="attendees">Attendees Email</label><br>
+    <input type="email" id="attendees" name="attendees"> <br>
+    <label for="token">Token</label><br>
+    <input type="text" name="token" id="token"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+
+</body>
+
+</html>

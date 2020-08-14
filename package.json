@@ -1,0 +1,28 @@
+{
+  "name": "googlemeetapi",
+  "version": "1.6.9",
+  "description": "Interactive Oauth for calender access in nodejs",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "googleapis": "^39.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SahilKr24/googlemeetapi.git"
+  },
+  "author": "SahilKr24",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SahilKr24/googlemeetapi/issues"
+  },
+  "homepage": "https://github.com/SahilKr24/googlemeetapi#readme"
+}
